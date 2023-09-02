@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Account Verification</title>
+    <link rel="stylesheet" type="text/css" href="sellerverify.css">
+</head>
+<body>
+    <h2>Seller Account Verification</h2>
+    <form action="seller_verifying.php" method="POST">
+
+        <label for="sellername">Seller Name:</label>
+        <input type="text" id="sellername" name="sellername" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phonenumber">Phone Number:</label>
+        <input type="tel" id="phonenumber" name="phonenumber" required>
+
+        <label for="identitynumber">Identity Number:</label>
+        <input type="number" id="identitynumber" name="identitynumber" required>
+
+        <label for="province">Province:</label>
+        <select id="province" name="province" onchange="toggleProvinceOptions()">
+          <option value="select">Select Province</option>
+          <option value="province1">Province 1</option>
+          <option value="province2">Province 2</option>
+          <option value="province3">Province 3</option>
+          <option value="province4">Province 4</option>
+          <option value="province5">Province 5</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+         <input type="submit" value="Submit">
+    </form>
+
+    <script src="verifyseller.js"></script>
+</body>
+</html>

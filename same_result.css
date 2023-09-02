@@ -1,0 +1,48 @@
+/* Container for individual products */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start; /* Change from "center" to "flex-start" to align items at the top */
+    margin: 20px;
+}
+
+/* Individual product item */
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px; /* Adjust this to your preferred width */
+    box-shadow: 2px 2px 4px #888;
+    text-align: center;
+    display: flex;
+    border: 1px solid #ccc;
+    flex-direction: column; /* Make sure items are stacked vertically inside the product-item */
+}
+
+/* Product image styling */
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Title styling */
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Price styling */
+.product-item .price {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Other product information styling */
+.product-item p {
+    margin: 5px 0;
+}
+
+#search-results div {
+    flex-direction: row;
+}

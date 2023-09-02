@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Example CSS */
+        #addProductBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Example HTML -->
+    <div id="addProductBox" onclick="redirectToLogin()">Update Product</div>
+    <!-- <div id="addProductBox" onclick="redirectToLo()">Add New Product</div> -->
+
+    
+    <script>
+        // Example JavaScript
+        function redirectToLogin() {
+            // Redirect to the login page
+            window.location.href = "login.html";
+        }
+
+        // Example login function
+         function login() {
+             // Implement your login logic here
+             // Simulating a successful login for testing purposes
+             var isLoggedIn = true;
+
+             if (isLoggedIn) {
+                 alert("Login is successful.");
+                 window.location.href = "sellerverify.html";
+             } else {
+                 alert("Login failed. Redirecting to register page.");
+                 window.location.href = "register.html";
+             }
+         }
+        
+
+    </script>
+</body>
+</html>

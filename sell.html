@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Example CSS */
+        #addProductBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #editProductBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Example HTML -->
+    <div id="addProductBox" onclick="redirectToPage('addproduct.html')">Add New Product</div>
+    <div id="editProductBox" onclick="redirectToPage('updating.php')">Edit Product</div>
+
+    <script>
+        // Example JavaScript
+        function redirectToPage(page) {
+            // Redirect to the specified page
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

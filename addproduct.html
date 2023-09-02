@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="addproduct.css">
+</head>
+<body>
+    <h2>Add New Product</h2>
+ <form action="addproduct.php" method="POST" enctype="multipart/form-data">
+   
+    <label for="image">Image:</label>
+    <div id="image-preview-container">
+         <input type="file" id="image" name="image" required>
+         <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+         <i class="clear-icon" id="clear-icon">&times;</i>    
+    </div>
+    <!-- <input type="file" id="image" name="image" required>
+    <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+    <i class="clear-icon" id="clear-icon">&times;</i> -->
+
+    <label for="sellername">Seller Name:</label>
+    <input type="text" id="sellername"  name="sellername" required>
+    
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+        <!--populate the categories dynamically from a database-->
+        <option value="category1">Computers & Peripherals</option>
+        <option value="category2">Electronics, TVs & More</option>
+        <option value="category3">Kitchen Applicanes</option>
+    </select>
+
+    <label for="subcategory">Subcategory:</label>
+    <select id="subcategory" name="subcategory" required>
+        <!--we can use javascript to update the subcategories dynamically -->
+        <option value="subcategory1">Laptops</option>
+        <option value="subcategory2">Printers & Scanners</option>
+        <option value="subcategory3">Table PCs & More</option>
+        <option value="subcategory4">Digital Cameras</option>
+        <option value="subcategory5">Headphones & Earphone-Wired</option>
+        <option value="subcategory6">Headphone & Earphone</option>
+        <option value="subcategory7">Refrigerator</option>
+        <option value="subcategory8">Microwave Oven</option>
+        <option value="subcategory9">Mixture Grinder</option>
+        <option value="subcategory10">Electric Kettle</option>
+        <option value="subcategory11">Rice Cooker</option>
+        <option value="subcategory12">Washing Machine</option>
+
+    </select>
+
+    <label for="productname">Product Name:</label>
+    <input type="text" id="productname" name="productname" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required>
+
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand" required>
+
+    <label for="description">Description:</label>
+    <input type="description" name="description" required></textarea>
+
+    <input type="submit" value="Add Product">
+
+ </form>
+
+ <script src="addproduct.js"></script>
+</body>
+</html>

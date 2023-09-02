@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+     <style> 
+        
+         .password-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer; 
+         }
+    </style>
+</head>
+<body>
+    <div style="border:1px solid #ccc; width: 500px; padding: 20px; margin-left:auto; margin-right: auto; display: flex; justify-content: center; align-items: center;" >
+        <form action="login.php" method="post">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <div class="container">
+                <h1>Login</h1>
+    
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+    
+                <label for="psw"><b>Password</b></label>
+                <div style="position: relative;">
+                    <input type="password" placeholder="Enter Password" name="psw" id="passwordInput" required>
+                    <span class="password-icon" onclick="togglePasswordVisibility()">
+                        <!-- You can replace the 'eye' and 'eye-slash' characters with appropriate Unicode icons -->
+                        &#128065; <!-- Eye icon -->
+                        <!--&#128065;--> <!-- Eye-slash icon -->
+                    </span>
+                </div>
+    
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember">Remember me
+                </label>
+            </div>
+    
+            <div class="container" style="background-color: #f1f1f1">
+                <button type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
+                <!-- login.php -->
+             <!-- <a href="forgot_password.php">Forgot Password?</a> -->
+
+                <span class="psw">Forgot <a href="otp_sending.html">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function cancel() {
+            var form = document.querySelector('form');
+            form.remove();
+        }
+
+        function closeForm() {
+            var form = document.querySelector('form');
+            form.style.display = 'none';
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('passwordInput');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
+
